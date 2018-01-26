@@ -1,0 +1,34 @@
+version: '3.5'
+services:
+  nginx:
+    build: .
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+    restart: always
+  dnsmasq:
+    image: andyshinn/dnsmasq 
+    command: --address=/#/127.0.0.1
+    ports:
+      - 53535:53/tcp
+      - 53535:53/udp
+    cap_add:
+      - NET_ADMIN
+    restart: always
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+    environment:
+      - UPS_DOCK_NAME=Mailhog
+      - VIRTUAL_HOST=mailhog.ups.dock
+      - VIRTUAL_PORT=8025
+      - HTTPS_METHOD=noredirect
+networks:
+  default:
+    driver: bridge
+    name: ups-dock
