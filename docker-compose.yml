@@ -28,6 +28,7 @@ services:
       - VIRTUAL_HOST=mailhog.ups.dock
       - VIRTUAL_PORT=8025
       - HTTPS_METHOD=noredirect
+    restart: always
 networks:
   default:
     driver: bridge
