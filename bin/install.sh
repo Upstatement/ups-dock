@@ -5,6 +5,12 @@ set -e
 # Generate SSL certificates
 ./bin/gen-certs.sh
 
+# Ensure /etc/resolver exists before usage
+if [ ! -f /etc/resolver ]; then
+    echo "Creating /etc/resolver..."
+    sudo mkdir /etc/resolver
+fi
+
 # Add DNS resolver
 if [ ! -f /etc/resolver/ups.dock ]; then
     echo "Adding DNS resolver for ups.dock..."
