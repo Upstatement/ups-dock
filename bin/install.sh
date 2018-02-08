@@ -6,7 +6,7 @@ set -e
 ./bin/gen-certs.sh
 
 # Ensure /etc/resolver exists before usage
-if [ ! -f /etc/resolver ]; then
+if [ ! -d /etc/resolver ]; then
     echo "Creating /etc/resolver..."
     sudo mkdir /etc/resolver
 fi
