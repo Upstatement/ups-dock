@@ -1,7 +1,10 @@
 version: '3.5'
 services:
     wordpress:
-        build: .
+        build:
+            context: .
+            args:
+                - WORDPRESS_THEME_NAME
         volumes:
             - ./:/var/www/html/wp-content/themes/${WORDPRESS_THEME_NAME}
             - ./plugins:/var/www/html/wp-content/plugins

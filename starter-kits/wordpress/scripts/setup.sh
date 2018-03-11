@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -31,4 +31,7 @@ if ! $(wp core is-installed); then
 
 	# Activate this theme.
 	wp theme activate "$WORDPRESS_THEME_NAME"
+
+	# Ensure correct permissions for files / directories creating during install.
+	chown -Rf nginx.nginx /var/www/html
 fi

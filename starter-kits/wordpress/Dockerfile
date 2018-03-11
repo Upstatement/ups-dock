@@ -40,3 +40,9 @@ COPY conf /var/www/html/conf
 # Copy startup scripts into location expected by nginx-php-fpm.
 # See https://github.com/richarvey/nginx-php-fpm/blob/master/docs/scripting_templating.md
 COPY scripts /var/www/html/scripts
+
+# Copy the rest of this theme into place
+ARG WORDPRESS_THEME_NAME
+COPY . /var/www/html/wp-content/themes/${WORDPRESS_THEME_NAME}
+COPY plugins /var/www/html/wp-content/plugins
+COPY uploads /var/www/html/wp-content/uploads
