@@ -28,7 +28,7 @@ If you need to SSH into your container, from your project root run `docker-compo
 
 ## Running
 
-`./bin/start.sh` will start the container, run composer & npm, and start Browsersync via webpack. Feel free to update (i.e. replace npm with yarn) as necessary. 
+`./bin/start.sh` will start the container. 
 
 Quitting this process (`Ctrl-C`) will shut down the container.
 
