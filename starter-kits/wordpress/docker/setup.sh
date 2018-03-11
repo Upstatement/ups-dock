@@ -2,16 +2,6 @@
 
 set -e
 
-# Install WP cli
-echo "Installing WP Cli..."
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-mv wp-cli.phar /usr/local/bin/wp
-
-# Download WordPress
-echo "Installing WordPress..."
-cd /var/www/html
-wp core download --path=/var/www/html --allow-root
 wp config create --dbname=wordpress --dbuser=wordpress --dbpass=wordpress --dbhost=db:3306 --skip-check --allow-root
 
 # This allows the WordPress site to run securly behind the ups-dock reverse proxy
