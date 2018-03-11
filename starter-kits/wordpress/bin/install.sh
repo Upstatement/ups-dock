@@ -12,7 +12,7 @@ wait_for_containers() {
 }
 
 wordpress_install() {  
-    docker-compose exec nginx-php-fpm /setup.sh
+    docker-compose exec wordpress /setup.sh
 }
 
 

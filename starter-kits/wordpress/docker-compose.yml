@@ -10,7 +10,7 @@ services:
             MYSQL_USER: wordpress
             MYSQL_PASSWORD: wordpress
 
-    nginx-php-fpm:
+    wordpress:
         build: .
         volumes:
             - ./:/var/www/html/wp-content/themes/YOUR-THEME-NAME

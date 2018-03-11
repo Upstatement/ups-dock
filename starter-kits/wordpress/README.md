@@ -24,7 +24,7 @@ This start kit assumes your git repository contains just the WordPress theme. If
 
 Once completed, you should be able to access your WordPress installation via `ups.dock`. 
 
-If you need to SSH into your container, from your project root run `docker-compose exec nginx-php-fpm /bin/bash`
+If you need to SSH into your container, from your project root run `docker-compose exec wordpress /bin/bash`
 
 ## Running
 
@@ -38,7 +38,7 @@ There is a basic database import script in `/bin/import.sh`. Just update the SQL
 
 ## wp-cli
 
-`docker-compose exec nginx-php-fpm wp --allow-root [command]`
+`docker-compose exec wordpress wp --allow-root [command]`
 
 ## TODO
 
