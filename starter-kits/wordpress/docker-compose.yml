@@ -22,6 +22,7 @@ services:
             UPS_DOCK_NAME: YOUR-THEME-NAME
             VIRTUAL_HOST: YOUR-THEME-NAME.ups.dock
             HTTPS_METHOD: noredirect
+            RUN_SCRIPTS: 1
             SKIP_CHOWN: 1
         networks:
             - proxy
