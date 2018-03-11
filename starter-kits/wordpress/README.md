@@ -19,8 +19,9 @@ This start kit assumes your git repository contains just the WordPress theme. If
 
 1. Make sure [Ups Dock](https://github.com/Upstatement/ups-dock) is installed and up and running
 2. Copy the `starter-kits/wordpress` directory to a new folder where would like your WordPress theme to live.
-3. Copy `.env.sample` to `.env` and update to reflect your site
-4. From the root directory run `./bin/install.sh`
+3. Copy `.env.sample` to `.env` and update to reflect your themes values
+4. Update `style.css` to reflect your themes values
+5. From the root directory run `./bin/install.sh`
 
 Once completed, you should be able to access your WordPress installation via `ups.dock`. 
 
