@@ -1,32 +1,27 @@
 version: '3.5'
 services:
+    wordpress:
+        build: .
+        volumes:
+            - ./:/var/www/html/wp-content/themes/${WORDPRESS_THEME_NAME}
+            - ./plugins:/var/www/html/wp-content/plugins
+            - ./uploads:/var/www/html/wp-content/uploads
+        depends_on:
+            - db
+        env_file: .env
+        networks:
+            - proxy
+            - default
     db:
         image: mysql
         volumes:
             - db_data:/var/lib/mysql
         environment:
+            # See https://hub.docker.com/_/mysql/
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: wordpress
             MYSQL_USER: wordpress
             MYSQL_PASSWORD: wordpress
-
-    wordpress:
-        build: .
-        volumes:
-            - ./:/var/www/html/wp-content/themes/YOUR-THEME-NAME
-            - ./plugins:/var/www/html/wp-content/plugins
-            - ./uploads:/var/www/html/wp-content/uploads
-        depends_on:
-            - db
-        environment:
-            UPS_DOCK_NAME: YOUR-THEME-NAME
-            VIRTUAL_HOST: YOUR-THEME-NAME.ups.dock
-            HTTPS_METHOD: noredirect
-            RUN_SCRIPTS: 1
-            SKIP_CHOWN: 1
-        networks:
-            - proxy
-            - default
 volumes:
     db_data:
 networks:
