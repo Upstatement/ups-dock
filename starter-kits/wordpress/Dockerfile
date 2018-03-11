@@ -20,3 +20,7 @@ RUN { \
 
 COPY docker/setup.sh /setup.sh
 RUN chmod +x /setup.sh
+
+# Copy custom configuration files into location that nginx-php-fpm expects.
+# See https://github.com/richarvey/nginx-php-fpm/blob/master/docs/nginx_configs.md
+COPY conf /var/www/html/conf
