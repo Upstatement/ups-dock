@@ -38,7 +38,7 @@ There is a basic database import script in `/bin/import.sh`. Just update the SQL
 
 ## wp-cli
 
-`docker-compose exec wordpress wp --allow-root [command]`
+`docker-compose exec wordpress wp [command]`
 
 ## TODO
 
