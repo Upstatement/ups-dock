@@ -22,8 +22,10 @@ RUN { \
 RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar; \
 	chmod +x wp-cli.phar; \
 	mv wp-cli.phar /usr/local/bin/; \
+	# Workaround for root usage scolding.
 	echo -e "#!/bin/bash\n\n/usr/local/bin/wp-cli.phar \"\$@\" --allow-root\n" > /usr/local/bin/wp; \
 	chmod +x /usr/local/bin/wp; \
+	# Add bash completons for interactive usage.
 	wget https://github.com/wp-cli/wp-cli/raw/master/utils/wp-completion.bash; \
 	mv wp-completion.bash $HOME; \
 	echo -e "source $HOME/wp-completion.bash\n" > $HOME/.bashrc 
