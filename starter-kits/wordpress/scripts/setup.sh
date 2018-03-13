@@ -33,5 +33,7 @@ if ! $(wp core is-installed); then
 	wp theme activate "$WORDPRESS_THEME_NAME"
 
 	# Ensure correct permissions for files / directories creating during install.
-	chown -Rf nginx.nginx /var/www/html
+	if [ -z "$SKIP_CHOWN" ]; then
+		chown -Rf nginx.nginx /var/www/html
+	fi
 fi
