@@ -19,16 +19,17 @@ This start kit assumes your git repository contains just the WordPress theme. If
 
 1. Make sure [Ups Dock](https://github.com/Upstatement/ups-dock) is installed and up and running
 2. Copy the `starter-kits/wordpress` directory to a new folder where would like your WordPress theme to live.
-3. Update all mentions of `YOUR-THEME-NAME` in `docker-compose.yml` to reflect your theme name
-4. From the root directory run `./bin/install.sh`
+3. Copy `.env.sample` to `.env` and update to reflect your themes values
+4. Update `style.css` to reflect your themes values
+5. From the root directory run `./bin/install.sh`
 
 Once completed, you should be able to access your WordPress installation via `ups.dock`. 
 
-If you need to SSH into your container, from your project root run `docker-compose exec nginx-php-fpm /bin/bash`
+If you need to SSH into your container, from your project root run `docker-compose exec wordpress /bin/bash`
 
 ## Running
 
-`./bin/start.sh` will start the container, run composer & npm, and start Browsersync via webpack. Feel free to update (i.e. replace npm with yarn) as necessary. 
+`./bin/start.sh` will start the container. 
 
 Quitting this process (`Ctrl-C`) will shut down the container.
 
@@ -38,7 +39,7 @@ There is a basic database import script in `/bin/import.sh`. Just update the SQL
 
 ## wp-cli
 
-`docker-compose exec nginx-php-fpm wp --allow-root [command]`
+`docker-compose exec wordpress wp [command]`
 
 ## TODO
 
