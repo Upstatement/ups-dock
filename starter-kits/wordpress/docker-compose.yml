@@ -1,0 +1,33 @@
+version: '3.5'
+services:
+    wordpress:
+        build:
+            context: .
+            args:
+                - WORDPRESS_THEME_NAME
+        volumes:
+            - ./:/var/www/html/wp-content/themes/${WORDPRESS_THEME_NAME}
+            - ./plugins:/var/www/html/wp-content/plugins
+            - ./uploads:/var/www/html/wp-content/uploads
+        depends_on:
+            - db
+        env_file: .env
+        networks:
+            - proxy
+            - default
+    db:
+        image: mysql
+        volumes:
+            - db_data:/var/lib/mysql
+        environment:
+            # See https://hub.docker.com/_/mysql/
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: wordpress
+            MYSQL_PASSWORD: wordpress
+volumes:
+    db_data:
+networks:
+    proxy:
+        name: ups-dock
+        external: true
