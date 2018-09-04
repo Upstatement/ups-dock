@@ -1,5 +1,7 @@
 FROM richarvey/nginx-php-fpm:1.5.0
 
+RUN apk update
+
 RUN apk add \
   mysql-client \
   openssl \
