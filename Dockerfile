@@ -6,10 +6,10 @@ COPY www /var/www/html
 
 # Customize proxy-wide nginx configuration
 RUN { \
-      echo 'client_max_body_size 100m;'; \
-    } > /etc/nginx/conf.d/proxy.conf
+  echo 'client_max_body_size 100m;'; \
+  } > /etc/nginx/conf.d/proxy.conf
 
 RUN set -ex; \
-    chown -R www-data:www-data /var/www/html && \
-    find /var/www/html -type d -exec chmod 2755 {} \; && \
-    find /var/www/html -type f -exec chmod 644 {} \;
+  chown -R www-data:www-data /var/www/html && \
+  find /var/www/html -type d -exec chmod 2755 {} \; && \
+  find /var/www/html -type f -exec chmod 644 {} \;
