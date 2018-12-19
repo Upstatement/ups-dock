@@ -11,22 +11,22 @@
 
 1. Clone this repository
 
-    ```
-    git clone git@github.com:Upstatement/ups-dock.git
-    ```
+   ```bash
+   git clone git@github.com:Upstatement/ups-dock.git
+   ```
 
 2. Run the install script
 
-    ```
-    cd ups-dock
-    ./bin/install.sh
-    ```
+   ```bash
+   cd ups-dock
+   ./bin/install.sh
+   ```
 
 3. Visit the [dashboard](https://ups.dock) to view all of your ups.dock sites
 
-    ```
-    open https://ups.dock
-    ```
+   ```bash
+   open https://ups.dock
+   ```
 
 ## Project Setup
 
@@ -41,21 +41,27 @@ Here's a minimal `docker-compose.yml` example:
 ```yaml
 version: '3.5'
 services:
-    web:
-        build: .
-        environment:
-            # Display name presented on http://ups.dock
-            UPS_DOCK_NAME: Example Website
-            # Host name you want to use. Must end in `ups.dock`.
-            VIRTUAL_HOST: example.ups.dock
-            # Allow http and https traffic (default will automatically redirect http -> https)
-            HTTPS_METHOD: noredirect
-        networks:
-            - proxy
-            - default
+  web:
+    build: .
+    environment:
+      # Display name presented on http://ups.dock
+      UPS_DOCK_NAME: Example Website
+      # Host name you want to use. Must end in `ups.dock`.
+      VIRTUAL_HOST: example.ups.dock
+      # Allow http and https traffic (default will automatically redirect http -> https)
+      HTTPS_METHOD: noredirect
+    networks:
+      - proxy
+      - default
 networks:
-    proxy:
-        name: ups-dock
-        external: true
+  proxy:
+    name: ups-dock
+    external: true
 ```
 
+## Starter Kits
+
+Ups Dock works for many platforms!
+
+- [Wordpress](https://github.com/Upstatement/skela-wp-theme)
+- [Craft](https://github.com/Upstatement/craft-starter)

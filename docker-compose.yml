@@ -10,7 +10,7 @@ services:
       - ./certs:/etc/nginx/certs
     restart: always
   dnsmasq:
-    image: andyshinn/dnsmasq 
+    image: andyshinn/dnsmasq
     command: --address=/#/127.0.0.1
     ports:
       - 53535:53/tcp
