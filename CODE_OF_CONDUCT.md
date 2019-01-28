@@ -65,7 +65,7 @@ Once the maintainers get involved, they will follow a documented series of steps
 
 ### Contacting Maintainers
 
-Refer to the GitHub repository for collaborator/maintainer information and email someone there.
+To contact members of the Upstatement engineering team, send an email to tech@upstatement.com
 
 ### Further Enforcement
 

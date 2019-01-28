@@ -88,10 +88,8 @@ Upstatement strives to provide a welcoming, inclusive environment for all users.
 
 ## License
 
-All Scout libraries are ISC-licensed. tl;dr: you can use this code however you'd like, just please attribute us appropriately!
+TBD
 
 ## About Upstatement
 
-[Upstatement](https://www.upstatement.com/) is a digital transformation studio headquartered in Boston, MA.
-
-_Write some more about Upstatement_
+[Upstatement](https://www.upstatement.com/) is a digital transformation studio headquartered in Boston, MA. Check out our [services](https://www.upstatement.com/services/) and our [work](https://www.upstatement.com/work/)!
