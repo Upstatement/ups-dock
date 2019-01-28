@@ -86,10 +86,6 @@ We welcome all contributions to our projects! Filing bugs, feature requests, cod
 
 Upstatement strives to provide a welcoming, inclusive environment for all users. To hold ourselves accountable to that mission, we have a strictly-enforced [code of conduct](CODE_OF_CONDUCT.md).
 
-## License
-
-TBD
-
 ## About Upstatement
 
 [Upstatement](https://www.upstatement.com/) is a digital transformation studio headquartered in Boston, MA. Check out our [services](https://www.upstatement.com/services/) and our [work](https://www.upstatement.com/work/)!
