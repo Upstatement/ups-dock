@@ -2,6 +2,21 @@
 
 > A front-end stack for Docker-based projects at Upstatement
 
+## Table of Contents
+
+- [Ups Dock](#ups-dock)
+  - [Table of Contents](#table-of-contents)
+  - [What's in the Box](#whats-in-the-box)
+  - [Usage](#usage)
+  - [Project Setup](#project-setup)
+  - [Starter Kits](#starter-kits)
+  - [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
+  - [License](#license)
+  - [About Upstatement](#about-upstatement)
+
+## What's in the Box
+
 - **Proxy**. An nginx instance configured to proxy requests to connected containers. Based on [nginx-proxy](https://github.com/jwilder/nginx-proxy).
 - **DNS**. A custom DNS server to resolve all `*.ups.dock` host names to the nginx proxy, powered by [dnsmasq](https://github.com/andyshinn/docker-dnsmasq).
 - **SSL**. A shared, self-signed wildcard certificate for use with `*.ups.dock` domains.
@@ -12,13 +27,12 @@
 1. Clone this repository
 
    ```bash
-   git clone git@github.com:Upstatement/ups-dock.git
+   git clone git@github.com:Upstatement/ups-dock.git && cd ups-dock
    ```
 
 2. Run the install script
 
    ```bash
-   cd ups-dock
    ./bin/install.sh
    ```
 
@@ -30,7 +44,7 @@
 
 ## Project Setup
 
-You can add Ups Dock support to your project in two step
+You can add Ups Dock support to your project in two steps:
 
 1. Add the `VIRTUAL_HOST` and `UPS_DOCK_NAME` environment variables to your web service
 2. Add the `ups-dock` external network to your web service
@@ -61,7 +75,23 @@ networks:
 
 ## Starter Kits
 
-Ups Dock works for many platforms!
-
 - [Wordpress](https://github.com/Upstatement/skela-wp-theme)
-- [Craft](https://github.com/Upstatement/craft-starter)
+- [Craft CMS](https://github.com/Upstatement/craft-starter)
+
+## Contributing
+
+We welcome all contributions to our projects! Filing bugs, feature requests, code changes, docs changes, or anything else you'd like to contribute are all more than welcome! More information about contributing can be found in the [contributing guidelines](.github/CONTRIBUTING.md)
+
+## Code of Conduct
+
+Upstatement strives to provide a welcoming, inclusive environment for all users. To hold ourselves accountable to that mission, we have a strictly-enforced [code of conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+All Scout libraries are ISC-licensed. tl;dr: you can use this code however you'd like, just please attribute us appropriately!
+
+## About Upstatement
+
+[Upstatement](https://www.upstatement.com/) is a digital transformation studio headquartered in Boston, MA.
+
+_Write some more about Upstatement_
