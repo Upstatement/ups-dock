@@ -88,4 +88,4 @@ Upstatement strives to provide a welcoming, inclusive environment for all users.
 
 ## About Upstatement
 
-[Upstatement](https://www.upstatement.com/) is a digital transformation studio headquartered in Boston, MA. Check out our [services](https://www.upstatement.com/services/) and our [work](https://www.upstatement.com/work/)!
+[Upstatement](https://www.upstatement.com/) is a digital transformation studio headquartered in Boston, MA that imagines and builds exceptional digital experiences. Make sure to check out our [services](https://www.upstatement.com/services/), [work](https://www.upstatement.com/work/), and [open positions](https://www.upstatement.com/jobs/)!

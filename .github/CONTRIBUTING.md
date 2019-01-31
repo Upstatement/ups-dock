@@ -113,7 +113,7 @@ Once you've filed the PR:
 - One or more maintainers will use GitHub's review feature to review your PR.
 - If the maintainer asks for any changes, edit your changes, push, and ask for another review.
 - If the maintainer decides to pass on your PR, they will thank you for the contribution and explain why they won't be accepting the changes. That's ok! We still really appreciate you taking the time to do it, and we don't take that lightly.
-- If your PR gets accepted, it will be marked as such, and merged into the `latest` branch soon after. Your contribution will be distributed to the masses next time the maintainers [tag a release](#tag-a-release)
+- If your PR gets accepted, it will be marked as such, and merged into the `master` branch soon after. Your contribution will be distributed to the masses next time the maintainers [tag a release](#tag-a-release)
 
 ## Contribute Code
 
@@ -128,7 +128,6 @@ To contribute code:
 - [Set up the project](#project-setup).
 - Make any necessary changes to the source code.
 - Include any [additional documentation](#contribute-documentation) the changes might need.
-- Write tests that verify that your contribution works as expected.
 - Write clear, concise commit message(s) using [conventional-changelog format](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md).
 - Dependency updates, additions, or removals must be in individual commits, and the message must use the format: `<prefix>(deps): PKG@VERSION`, where `<prefix>` is any of the usual `conventional-changelog` prefixes, at your discretion.
 - Go to https://github.com/Upstatement/ups-dock/pulls and open a new pull request with your changes.
@@ -136,11 +135,10 @@ To contribute code:
 
 Once you've filed the PR:
 
-- Barring special circumstances, maintainers will not review PRs until all checks pass (Travis, AppVeyor, etc).
 - One or more maintainers will use GitHub's review feature to review your PR.
 - If the maintainer asks for any changes, edit your changes, push, and ask for another review. Additional tags (such as `needs-tests`) will be added depending on the review.
 - If the maintainer decides to pass on your PR, they will thank you for the contribution and explain why they won't be accepting the changes. That's ok! We still really appreciate you taking the time to do it, and we don't take that lightly.
-- If your PR gets accepted, it will be marked as such, and merged into the `latest` branch soon after. Your contribution will be distributed to the masses next time the maintainers [tag a release](#tag-a-release)
+- If your PR gets accepted, it will be marked as such, and merged into the `master` branch soon after. Your contribution will be distributed to the masses next time the maintainers [tag a release](#tag-a-release)
 
 ## Provide Support on Issues
 
@@ -200,7 +198,7 @@ To clean up issues and PRs:
   - not marked as `starter` or `help wanted` (these might stick around for a while, in general, as they're intended to be available)
   - no explicit messages in the comments asking for it to be left open
   - does not belong to a milestone
-- Leave a message when closing saying "Cleaning up stale issue. Please reopen or ping us if and when you're ready to resume this. See the [contributing guidelines](https://github.com/Upstatement/ups-dock/blob/latest/CONTRIBUTING.md#clean-up-issues-and-prs) for more details."
+- Leave a message when closing saying "Cleaning up stale issue. Please reopen or ping us if and when you're ready to resume this. See the [contributing guidelines](https://github.com/Upstatement/ups-dock/blob/master/CONTRIBUTING.md#clean-up-issues-and-prs) for more details."
 
 ## Review Pull Requests
 
@@ -211,7 +209,6 @@ PR reviews use [GitHub's own review feature](https://help.github.com/articles/ab
 Some notes:
 
 - You may ask for minor changes ("nitpicks"), but consider whether they are really blockers to merging: try to err on the side of "approve, with comments".
-- _ALL PULL REQUESTS_ should be covered by a test: either by a previously-failing test, an existing test that covers the entire functionality of the submitted code, or new tests to verify any new/changed behavior. All tests must also pass and follow established conventions. Test coverage should not drop, unless the specific case is considered reasonable by maintainers.
 - Please make sure you're familiar with the code or documentation being updated, unless it's a minor change (spellchecking, minor formatting, etc). You may @mention another project member who you think is better suited for the review, but still provide a non-approving review of your own.
 - Be extra kind: people who submit code/doc contributions are putting themselves in a pretty vulnerable position, and have put time and care into what they've done (even if that's not obvious to you!) -- always respond with respect, be understanding, but don't feel like you need to sacrifice your standards for their sake, either. Just don't be a jerk about it?
 
