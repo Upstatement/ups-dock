@@ -7,14 +7,14 @@ set -e
 
 # Ensure /etc/resolver exists before usage
 if [ ! -d /etc/resolver ]; then
-    echo "Creating /etc/resolver..."
-    sudo mkdir /etc/resolver
+  echo "Creating /etc/resolver..."
+  sudo mkdir /etc/resolver
 fi
 
 # Add DNS resolver
 if [ ! -f /etc/resolver/ups.dock ]; then
-    echo "Adding DNS resolver for ups.dock..."
-    echo -e "nameserver 127.0.0.1\nport 53535\n" | sudo tee /etc/resolver/ups.dock
+  echo "Adding DNS resolver for ups.dock..."
+  echo -e "nameserver 127.0.0.1\nport 53535\n" | sudo tee /etc/resolver/ups.dock
 fi
 
 # Start Docker containers
