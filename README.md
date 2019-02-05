@@ -17,7 +17,6 @@ Ups Dock is our solution to some common pain points we encountered working with 
   - [Making your project work with Ups Dock](#making-your-project-work-with-ups-dock)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
-  - [License](#license)
   - [About Upstatement](#about-upstatement)
 
 ## What's in the Box
