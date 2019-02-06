@@ -27,6 +27,8 @@
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+  --spacing-lg: 50px;
+  --spacing-sm: 20px;
 }
 
 html {
@@ -55,21 +57,8 @@ body {
   color: var(--black);
   font-size: 18px;
   line-height: 1.5;
-}
-
-header,
-main {
-  padding: 50px;
-}
-
-header {
-  background-color: var(--blue);
-  color: var(--white);
-  height: 250px;
-}
-
-main {
-  margin-top: -120px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1,
@@ -80,6 +69,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 a {
@@ -88,16 +78,45 @@ a {
   transition: all 0.25s ease;
 }
 
+header,
+main,
+footer {
+  padding: var(--spacing-lg);
+}
+
+header {
+  background-color: var(--blue);
+  color: var(--white);
+  height: 250px;
+}
+
+header > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: var(--spacing-lg);
+}
+
+header #upstatement-logo {
+  width: 120px;
+  height: auto;
+  fill: var(--white);
+}
+
+main {
+  margin-top: -120px;
+}
+
 #site-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 330px));
-  grid-gap: 20px;
+  grid-gap: var(--spacing-sm);
   justify-content: center;
 }
 
 .card {
   position: relative;
-  padding: 20px;
+  padding: var(--spacing-sm);
   background-color: var(--white);
   min-height: 200px;
   border-radius: 5px;
@@ -133,7 +152,7 @@ a {
 
 .card .card__top h2 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: var(--spacing-sm);
 }
 
 .card .card__top pre {
@@ -160,4 +179,14 @@ a {
 .card .card__bottom a:focus {
   background-color: var(--blue);
   color: var(--white);
+}
+
+footer {
+  text-align: center;
+}
+
+footer #icon-github {
+  width: 40px;
+  height: auto;
+  fill: var(--gray);
 }
