@@ -69,12 +69,17 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 10px;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+svg {
+  fill: inherit;
   transition: all 0.25s ease;
 }
 
@@ -136,14 +141,19 @@ main {
   flex-grow: 1;
 }
 
+.card .card__top .card__title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card .card__top .status {
+  flex-grow: 1;
   width: 15px;
+  max-width: 15px;
   height: 15px;
   border-radius: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
   background-color: var(--red);
+  margin-left: 10px;
 }
 
 .card .card__top .status.on {
@@ -153,6 +163,7 @@ main {
 .card .card__top h2 {
   font-weight: 700;
   font-size: var(--spacing-sm);
+  margin: 0;
 }
 
 .card .card__top pre {
@@ -185,8 +196,13 @@ footer {
   text-align: center;
 }
 
-footer #icon-github {
+footer a #icon-github {
   width: 40px;
   height: auto;
   fill: var(--gray);
+}
+
+footer a:hover #icon-github,
+footer a:focus #icon-github {
+  fill: var(--black);
 }

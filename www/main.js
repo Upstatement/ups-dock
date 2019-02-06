@@ -21,8 +21,10 @@ function renderSiteList(sites) {
       return `
         <div class="card">
           <div class="card__top">
-            <div class="status ${site.running && 'on'}"></div>
-            <h2>${site.name}</h2>
+            <div class="card__title">
+              <h2>${site.name}</h2>
+              <div class="status ${site.running && 'on'}"></div>
+            </div>
             <pre>${host}</pre>
           </div>
           <div class="card__bottom">
