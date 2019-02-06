@@ -17,9 +17,19 @@ async function fetchSites() {
 
 function renderSiteList(sites) {
   const siteList = sites.map(site => {
-    const off = site.running ? '' : ' (Stopped)';
     return site.hosts.split(',').map(host => {
-      return `<li><a href="${site.protocol}://${host}">${site.name}${off}</a></li>`;
+      return `
+        <div class="card">
+          <div class="card__top">
+            <div class="status ${site.running && 'on'}"></div>
+            <h2>${site.name}</h2>
+            <pre>${host}</pre>
+          </div>
+          <div class="card__bottom">
+            <a href="${site.protocol}://${host}" target="_blank">Visit Site</a>
+          </div>
+        </div>
+      `;
     }).join('\n');
   }).join('\n');
 
