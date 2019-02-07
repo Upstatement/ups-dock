@@ -148,6 +148,7 @@ main {
 
 .card .card__top .status {
   flex-grow: 1;
+  flex-shrink: 0;
   width: 15px;
   max-width: 15px;
   height: 15px;
