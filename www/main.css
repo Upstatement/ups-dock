@@ -1,5 +1,5 @@
 :root {
-  --white: #ffffff;
+  --white: #fff;
   --offWhite: #eff0f2;
   --black: #022144;
   --blue: #287cf9;
@@ -12,7 +12,6 @@
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
-  --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #007bff;
@@ -153,12 +152,13 @@ main {
   max-width: 15px;
   height: 15px;
   border-radius: 100%;
-  background-color: var(--red);
+  background-color: var(--offWhite);
   margin-left: 10px;
 }
 
 .card .card__top .status.on {
   background-color: var(--green);
+  animation: status-pulse 0.8s ease-in-out infinite alternate forwards;
 }
 
 .card .card__top h2 {
@@ -206,4 +206,13 @@ footer a #icon-github {
 footer a:hover #icon-github,
 footer a:focus #icon-github {
   fill: var(--black);
+}
+
+@keyframes status-pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.65;
+  }
 }

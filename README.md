@@ -15,6 +15,7 @@ Ups Dock is our solution to some common pain points we encountered working with 
   - [Installation](#installation)
   - [Getting Started](#getting-started)
   - [Making your project work with Ups Dock](#making-your-project-work-with-ups-dock)
+  - [Troubleshooting](#troubleshooting)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
   - [About Upstatement](#about-upstatement)
@@ -98,6 +99,18 @@ networks:
 ```
 
 You can route SMTP traffic to the `mailhog` host, port `1025` to catch outgoing email during development. Intercepted email is visible at https://mailhog.ups.dock.
+
+## Troubleshooting
+
+### Docker Desktop: Error invoking remote method `docker-start-container` - Mounts Denied
+
+![image](https://user-images.githubusercontent.com/1508604/188007165-5bfbb1c7-bfcb-4cae-9f79-3b533e637cc9.png)
+
+You should be able to resolve this by re-creating the Ups Dock containers with the following command:
+
+```
+docker-compose up -d
+```
 
 ## Contributing
 
