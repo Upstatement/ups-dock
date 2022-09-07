@@ -16,6 +16,7 @@ openssl req \
   -nodes \
   -x509 \
   -days 1825 \
+  -extensions req_extensions \
   -keyout certs/ups.dock.key \
   -out certs/ups.dock.crt
 
