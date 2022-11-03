@@ -1,5 +1,5 @@
-# This is the default vhost configuration. It will be
-# used for all other vhosts
+# Provide a file matching the name of each vhost to override
+# in this case, the vhost would be `route.subdomain.com`
 
 # It is recommended to set proxy buffer sizes to only what is required,
 # therefore we highly suggest you reduce your default values. Your header
