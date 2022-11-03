@@ -16,8 +16,8 @@ openssl req \
   -nodes \
   -x509 \
   -days 1825 \
-  -keyout certs/ups.dock_key.pem \
-  -out certs/ups.dock_crt.pem
+  -keyout certs/ups.dock.key \
+  -out certs/ups.dock.crt
 
 echo "Adding trusted certificate to system keychain..."
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain certs/ups.dock.crt
