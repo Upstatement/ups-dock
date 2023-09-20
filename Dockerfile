@@ -1,4 +1,4 @@
-FROM jwilder/nginx-proxy
+FROM nginxproxy/nginx-proxy:1.3.1
 
 COPY config/nginx.conf /etc/nginx/conf.d/ups.conf
 COPY config/vhosts /etc/nginx/vhost.d

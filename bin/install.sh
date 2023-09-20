@@ -19,7 +19,7 @@ fi
 
 # Start Docker containers
 echo "Starting ups-proxy and dnsmasq..."
-docker-compose up --build -d
+docker compose up --build -d
 
 echo "All done!"
 echo "........."
