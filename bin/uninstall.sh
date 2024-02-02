@@ -11,6 +11,6 @@ echo "Removing DNS resolver for ups.dock..."
 sudo rm -rf /etc/resolver/ups.dock
 
 echo "Destroying containers..."
-docker-compose down -v --remove-orphans
+docker compose down -v --remove-orphans
 
 echo "Done!"
